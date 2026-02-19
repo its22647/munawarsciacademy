@@ -3,61 +3,84 @@
     --gold: #c5a059;
     --bg: #fcfcfc;
     --text: #334155;
-    --border: #e2e8f0;
 }
 
+/* IMPORTANT: Hide Vertical & Horizontal Scrollbars 
+   while keeping scroll functionality 
+*/
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+html, body { 
+    width: 100%; 
+    overflow-x: hidden; 
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE/Edge */
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar { 
+    display: none; /* Chrome, Safari, Opera */
+}
 
-/* Navbar Fixed & Centered Title */
-.navbar { background: #fff; padding: 30px 0 15px; border-bottom: 4px solid var(--gold); position: sticky; top: 0; z-index: 1000; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); }
+
+/* Logo Animation - Smooth Gold/Navy Shift */
+.academy-anim {
+    animation: smoothPulse 5s infinite ease-in-out;
+}
+.academy-anim span {
+    animation: smoothPulseInverse 5s infinite ease-in-out;
+}
+@keyframes smoothPulse {
+    0%, 100% { color: var(--primary); }
+    50% { color: var(--gold); }
+}
+@keyframes smoothPulseInverse {
+    0%, 100% { color: var(--gold); }
+    50% { color: var(--primary); }
+}
+
+/* Navbar */
+.navbar { background: #fff; padding: 25px 0 10px; border-bottom: 4px solid var(--gold); position: sticky; top: 0; z-index: 1000; width: 100%; }
 .nav-flex-center { display: flex; justify-content: center; align-items: center; text-align: center; }
 .center-link { text-align: center; margin-top: 10px; }
-.logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); text-decoration: none; letter-spacing: -1px; }
-.logo span { color: var(--gold); }
-.back-link { text-decoration: none; color: var(--gold); font-weight: 800; font-size: 0.8rem; letter-spacing: 1px; }
+.logo { font-size: 2rem; font-weight: 800; text-decoration: none; letter-spacing: -1px; }
+.back-link { text-decoration: none; color: var(--gold); font-weight: 800; font-size: 0.8rem; letter-spacing: 1px; display: inline-block; margin-bottom: 10px; }
 
-/* Animations */
-.animated-title { animation: fadeInDown 0.8s ease-out; }
-.animated-up { animation: fadeInUp 1s ease-out; }
-
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Home Portal Content */
-.portal-main { padding: 80px 0; text-align: center; background: radial-gradient(circle at top, #fff 0%, #f1f5f9 100%); min-height: 85vh; }
-.hero-text-center h1 { font-size: 4rem; color: var(--primary); font-weight: 800; margin-bottom: 15px; }
+/* Home Portal Design */
+.portal-main { padding: 80px 0; text-align: center; background: radial-gradient(circle at top, #fff 0%, #f1f5f9 100%); min-height: 85vh; width: 100%; }
+.hero-text-center h1 { font-size: 4.5rem; color: var(--primary); font-weight: 800; margin-bottom: 15px; letter-spacing: -2px; }
 .hero-text-center h1 span { color: var(--gold); }
+.hero-text-center p { font-size: 1.25rem; max-width: 800px; margin: auto; color: #64748b; font-weight: 700; }
 
-/* Unified Card System */
-.card-grid-portal, .card-grid-heavy { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 60px; }
-.portal-nav-card, .info-card { background: #fff; padding: 60px 40px; border-radius: 24px; border: 1px solid var(--border); text-decoration: none; color: inherit; transition: 0.4s; }
+/* Heavy Card Typography */
+.heavy-card-title { font-weight: 800; font-size: 1.6rem; color: var(--primary); margin-bottom: 12px; letter-spacing: -0.5px; }
+.heavy-card-text { font-weight: 700; font-size: 1rem; color: #475569; line-height: 1.6; }
+
+.card-grid-portal, .card-grid-heavy { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 60px; padding: 0 20px; }
+.portal-nav-card, .info-card { background: #fff; padding: 60px 40px; border-radius: 24px; border: 1px solid #e2e8f0; text-decoration: none; color: inherit; transition: 0.4s; }
 .portal-nav-card:hover, .info-card:hover { transform: translateY(-12px); border-color: var(--gold); box-shadow: 0 30px 60px rgba(197, 160, 89, 0.15); }
+.card-icon, .gold-icon { font-size: 3.5rem; color: var(--gold); margin-bottom: 25px; }
 
-/* All Sub-page cards now have the Gold accent line */
+/* Symmetrical Card Lines */
 .gold-accent { border-top: 6px solid var(--gold) !important; }
-.gold-icon { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; display: block; text-align: center; }
 
-/* Admission Panel Centered */
-.sub-page { padding: 60px 0 100px; min-height: 80vh; }
-.page-title { text-align: center; font-size: 3rem; margin-bottom: 60px; font-weight: 800; }
+/* Contact Interface */
+.sub-page { padding: 60px 0 120px; min-height: 80vh; width: 100%; }
+.page-title { text-align: center; font-size: 3.5rem; margin-bottom: 70px; font-weight: 800; letter-spacing: -1px; }
 .page-title span { color: var(--gold); }
-.admission-panel { background: #fff; border-radius: 40px; border: 1px solid var(--border); overflow: hidden; max-width: 900px; margin: auto; }
+.admission-panel { background: #fff; border-radius: 40px; border: 1px solid #e2e8f0; overflow: hidden; max-width: 900px; margin: auto; }
 .panel-header { background: var(--primary); color: white; padding: 60px 40px; text-align: center; }
 .contact-methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-.method-card { padding: 50px 30px; text-align: center; border: 1px solid var(--border); }
+.method-card { padding: 50px 30px; text-align: center; border: 1px solid #e2e8f0; }
 .gold-bg { background: #fcf9f2; }
 .call-action-center { padding: 40px; text-align: center; }
-.main-call-btn { background: var(--primary); color: white; text-decoration: none; padding: 18px 45px; border-radius: 50px; font-weight: 800; display: inline-block; transition: 0.3s; }
+.main-call-btn { background: var(--primary); color: white; text-decoration: none; padding: 20px 50px; border-radius: 50px; font-weight: 800; display: inline-block; transition: 0.3s; }
 .main-call-btn:hover { background: var(--gold); transform: scale(1.05); }
 
 .copy-field-heavy { margin-top: 15px; display: inline-flex; align-items: center; gap: 15px; background: white; padding: 10px 20px; border: 2px solid var(--gold); border-radius: 12px; font-weight: 800; }
-.copy-field-heavy button { background: var(--gold); color: white; border: none; padding: 5px 15px; border-radius: 6px; cursor: pointer; }
+.copy-field-heavy button { background: var(--gold); color: white; border: none; padding: 5px 15px; border-radius: 6px; cursor: pointer; font-weight: 800; }
 
-footer { padding: 40px; text-align: center; font-weight: 600; color: #94a3b8; }
+footer { padding: 50px; text-align: center; font-weight: 700; color: #94a3b8; border-top: 1px solid #f0f0f0; }
+
+@media (max-width: 768px) {
+    .hero-text-center h1 { font-size: 2.8rem; }
+    .page-title { font-size: 2.5rem; }
+}
