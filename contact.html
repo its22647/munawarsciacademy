@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Munawar Science Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex-center">
+            <a href="index.html" class="logo animated-title">MUNAWAR <span>SCIENCE ACADEMY</span></a>
+        </div>
+        <div class="container center-link">
+            <a href="index.html" class="back-link">BACK TO PORTAL</a>
+        </div>
+    </nav>
+
+    <section class="sub-page">
+        <div class="container">
+            <div class="admission-panel animated-up">
+                <div class="panel-header">
+                    <h2>Admission <span>Inquiry</span></h2>
+                    <p>Connect with our administration for registrations and campus visits.</p>
+                </div>
+                <div class="contact-methods">
+                    <div class="method-card">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>Campus Location</h4>
+                        <p>Rani Market, Railway Scheme 1, Chaklala, Rawalpindi.</p>
+                    </div>
+                    <div class="method-card gold-bg">
+                        <i class="fas fa-phone-volume"></i>
+                        <h4>Direct Contact</h4>
+                        <div class="copy-field-heavy">
+                            <span id="p-num">0345 5513573</span>
+                            <button onclick="copyNum()"><i class="fas fa-copy"></i> COPY</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="call-action-center">
+                    <a href="tel:03455513573" class="main-call-btn">CALL OFFICE NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function copyNum() {
+            var n = document.getElementById("p-num").innerText;
+            navigator.clipboard.writeText(n).then(function() { alert("Copied!"); });
+        }
+    </script>
+</body>
+</html>

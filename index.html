@@ -3,117 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Munawar Science Academy | Academic Excellence</title>
+    <title>Munawar Science Academy | Official Portal</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Public+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="home-portal">
 
     <nav class="navbar">
-        <div class="container nav-flex">
-            <div class="logo">MUNAWAR <span>SCIENCE ACADEMY</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#academics">Programs</a></li>
-                <li><a href="#facilities">Facilities</a></li>
-                <li><a href="#contact" class="nav-btn">Get Admission</a></li>
-            </ul>
+        <div class="container nav-flex-center">
+            <div class="logo animated-title">MUNAWAR <span>SCIENCE ACADEMY</span></div>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="container hero-centered">
-            <span class="badge">Admissions Open 2026</span>
-            <h1>Munawar Science Academy</h1>
-            <h2>Excellence In <span>Education</span></h2>
-            <p>Providing a high-standard educational environment for Matric and F.Sc students in Rawalpindi with expert faculty.</p>
-            <div class="hero-btns">
-                <a href="#academics" class="btn btn-primary">Explore Programs</a>
-                <a href="#contact" class="btn btn-outline">Visit Campus</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="academics" class="section">
+    <section class="portal-main">
         <div class="container">
-            <h2 class="section-title">Academic Programs</h2>
-            <div class="grid-3">
-                <div class="premium-card">
-                    <div class="icon-box"><i class="fas fa-book-open"></i></div>
-                    <h3>Junior Wing</h3>
-                    <p>Up to Class 8.</p>
-                </div>
-                <div class="premium-card active-border">
-                    <div class="icon-box"><i class="fas fa-microscope"></i></div>
-                    <h3>Senior Wing</h3>
-                    <p>Specialized coaching for Matric (9th & 10th) and F.Sc (Intermediate) Pre-Medical & Engineering.</p>
-                </div>
-                <div class="premium-card">
-                    <div class="icon-box"><i class="fas fa-user-shield"></i></div>
-                    <h3>Gender Specific</h3>
-                    <p>Separate classes for boys and girls to maintain a focused learning environment.</p>
-                </div>
+            <div class="hero-text-center animated-up">
+                <h1>Excellence In <span>Education</span></h1>
+                <p>Munawar Science Academy provides a high-standard educational environment for Matric and F.Sc students in Rawalpindi with expert faculty.</p>
             </div>
-        </div>
-    </section>
 
-    <section id="facilities" class="section bg-alt">
-        <div class="container">
-            <h2 class="section-title">Our Distinction</h2>
-            <div class="facilities-grid">
-                <div class="fac-item"><i class="fas fa-check-circle"></i> Expert Subject Specialists</div>
-                <div class="fac-item"><i class="fas fa-check-circle"></i> Regular Test Series</div>
-                <div class="fac-item"><i class="fas fa-check-circle"></i> Concept-Based Learning</div>
-                <div class="fac-item"><i class="fas fa-check-circle"></i> Progress Monitoring</div>
-                <div class="fac-item"><i class="fas fa-check-circle"></i> Parent Meetings</div>
-                <div class="fac-item"><i class="fas fa-check-circle"></i> Quality Education</div>
-            </div>
-        </div>
-    </section>
+            <div class="card-grid-portal animated-up">
+                <a href="programs.html" class="portal-nav-card">
+                    <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3>Academic Programs</h3>
+                    <p>Junior & Senior Wing Details</p>
+                    <span class="card-link">Explore Now <i class="fas fa-arrow-right"></i></span>
+                </a>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="contact-box-premium">
-                <div class="contact-header">
-                    <h2>Reach Out to Us</h2>
-                    <p>Visit Munawar Science Academy for a brighter academic future.</p>
-                </div>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h4>Location</h4>
-                        <p>Rani Market, Railway Scheme 1, Chaklala, Rawalpindi.</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <h4>Contact</h4>
-                        <div class="copy-field">
-                            <span id="phone-number">0345 5513573</span>
-                            <button onclick="copyNumber()" class="copy-btn"><i class="fas fa-copy"></i> Copy</button>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <h4>Email</h4>
-                        <p>chembio0345@gmail.com</p>
-                    </div>
-                </div>
+                <a href="facilities.html" class="portal-nav-card">
+                    <div class="card-icon"><i class="fas fa-medal"></i></div>
+                    <h3>Our Facilities</h3>
+                    <p>Key Academy Distinctions</p>
+                    <span class="card-link">View Facilities <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <a href="contact.html" class="portal-nav-card">
+                    <div class="card-icon"><i class="fas fa-map-location-dot"></i></div>
+                    <h3>Get Admission</h3>
+                    <p>Visit Our Campus Today</p>
+                    <span class="card-link">Contact Us <i class="fas fa-arrow-right"></i></span>
+                </a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Munawar Science Academy. All Rights Reserved.</p>
+        <p>© 2026 Munawar Science Academy | Academic Excellence</p>
     </footer>
-
-    <script>
-        function copyNumber() {
-            var num = document.getElementById("phone-number").innerText;
-            navigator.clipboard.writeText(num).then(function() {
-                alert("Number copied: " + num);
-            });
-        }
-    </script>
 </body>
 </html>
